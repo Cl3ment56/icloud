@@ -1,0 +1,33 @@
+<doctype html>
+<html>
+<head>
+  <title>iCloud</title>
+  <meta charset="utf-8"></meta>
+  <link rel="icon" type="image/png" href="apple-logo.png" />
+</head>
+<body>
+  <a id=lien></a>
+  <script>
+
+    function choix(){
+      var val=prompt("Calendar / Photos / Notes / Reminders");
+      console.log(val);
+      if(val=="c"){
+        document.getElementById("lien").href="https://icloud.com/calendar";
+      }else if(val=="p"){
+        document.getElementById("lien").href="https://icloud.com/photos";
+      }else if(val=="n"){
+        document.getElementById("lien").href="https://icloud.com/notes";
+      }else if(val=="r"){
+        document.getElementById("lien").href="https://icloud.com/reminders";
+      }
+      else{
+        alert("Bad Choise");
+        document.getElementById("lien").href="file:///C:/Users/Clément/Documents/Shortcut_chrome/index.html";
+      }
+      document.getElementById("lien").click();
+    }
+    window.onload = choix;
+  </script>
+</body>
+</html>
