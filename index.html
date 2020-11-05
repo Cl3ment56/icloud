@@ -7,19 +7,41 @@
 </head>
 <body>
   <a id=lien></a>
+
+  <div id="container">
+    <a href="https://icloud.com/calendar"><img src="calendar.png"></a>
+    <a href="https://icloud.com/photos"><img src="photos.png"></a>
+    <a href="https://icloud.com/notes"><img src="notes.png"></a>
+    <a href="https://icloud.com/reminder"><img src="reminder.png"></a>
+    <a href="https://music.apple.com/library/playlist/p.gek1REGcLab68zz"><img src="music.png"></a>
+  </div>
+
+  <style>
+    img{
+      width: 200px;
+      height: 200px;
+      border: solid black 5px;
+      border-radius: 30px;
+    }
+
+    .container{
+      text-align: center;
+    }
+  
+  </style>
   <script>
 
     function choix(){
       var val=prompt("Calendar / Photos / Notes / Reminders");
       console.log(val);
       if(val=="c"){
-        document.getElementById("lien").href="https://icloud.com/calendar/";
+        document.getElementById("lien").href="https://icloud.com/calendar";
       }else if(val=="p"){
-        document.getElementById("lien").href="https://icloud.com/photos/";
+        document.getElementById("lien").href="https://icloud.com/photos";
       }else if(val=="n"){
-        document.getElementById("lien").href="https://icloud.com/notes/";
+        document.getElementById("lien").href="https://icloud.com/notes";
       }else if(val=="r"){
-        document.getElementById("lien").href="https://icloud.com/reminders/";
+        document.getElementById("lien").href="https://icloud.com/reminders";
       }
       else{
         alert("Bad Choise");
@@ -27,7 +49,7 @@
       }
       document.getElementById("lien").click();
     }
-    window.onload = choix;
+    //window.onload = choix;
   </script>
 </body>
 </html>
